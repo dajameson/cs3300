@@ -1,0 +1,17 @@
+require 'rails_helper'
+
+#can add tests for features here
+RSpec.feature "HomePages", type: :feature do
+  pending "add some scenarios (or delete) #{__FILE__}"
+end
+
+
+require "rails_helper"
+#tests if a visitor to site can see the projects
+RSpec.feature "Visiting the homepage", type: :feature do
+  scenario "The visitor should see projects" do
+    visit root_path
+    expect(page).to have_text("Projects")
+  end
+end
+
