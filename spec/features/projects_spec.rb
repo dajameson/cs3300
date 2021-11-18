@@ -1,21 +1,22 @@
 require 'rails_helper'
 #can add tests 
-RSpec.feature "Projects", type: :feature do
-  pending "add some scenarios (or delete) #{__FILE__}"
-end
+#RSpec.feature "Projects", type: :feature do
+#  pending "add some scenarios (or delete) #{__FILE__}"
+#end
 
 
 require 'rails_helper'
 #tests features of projects
 RSpec.feature "Projects", type: :feature do
  #tests if you can create a project and a title
-  context "Create new project" do
+  describe "Create new project" do
     before(:each) do
       visit new_project_path
       within("form") do
         fill_in "Title", with: "Test title"
       end
     end
+
     #tests if you can create description
     scenario "should be successful" do
       fill_in "Description", with: "Test description"
@@ -44,7 +45,7 @@ RSpec.feature "Projects", type: :feature do
     end
     #fail scenario where description is blank
     scenario "should fail" do
-      within("form") do
+      within('form', ) do
         fill_in "Description", with: ""
       end
       click_button "Update Project"
