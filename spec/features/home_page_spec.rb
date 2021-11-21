@@ -18,25 +18,25 @@ RSpec.feature "Visiting the homepage", type: :feature do
     visit root_path
     expect(page).to have_text("log out")
   end
-  scenario "The visitor should see Email" do
-    visit root_path
-    expect(page).to have_text("Email")
-  end
-  scenario "The visitor should see Password" do
-    visit root_path
-    expect(page).to have_text("Password")
-  end
-  scenario "The visitor should see Sign up" do
-    visit root_path
-    expect(page).to have_text("Remember me")
-  end
+  #scenario "The visitor should see Email" do
+  #  visit root_path
+  #  expect(page).to have_text("Email")
+  #end
+  #scenario "The visitor should see Password" do
+  #  visit root_path
+   # expect(page).to have_text("Password")
+  #end
+  #scenario "The visitor should see Sign up" do
+  #  visit root_path
+  #  expect(page).to have_text("Remember me")
+  #end
   scenario "The visitor should see Sign up" do
     visit root_path
     expect(page).to have_text("Sign up")
   end
-  scenario "The visitor should see Forgot your password?" do
-    visit root_path
-    expect(page).to have_text("Forgot your password?")
-  end
+  #scenario "The visitor should see Forgot your password?" do
+  #  visit root_path
+  #  expect(page).to have_text("Forgot your password?")
+  #end
 end
 

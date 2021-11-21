@@ -17,7 +17,7 @@ require_relative 'support/controller_macros'
 
 RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, :type => :controller
-  #config.include Devise::Test::IntegrationHelpers, :type => :request
+  config.include Devise::Test::IntegrationHelpers, :type => :feature
   #config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.include FactoryBot::Syntax::Methods
   #config.use_transactional_fixtures = true
