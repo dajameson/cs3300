@@ -9,16 +9,16 @@ require 'rails_helper'
 require "rails_helper"
 #tests if a visitor to site can see the projects
 RSpec.feature "Visiting the homepage", type: :feature do
-  scenario "The visitor should see log in" do
+ # scenario "The visitor should see log in" do
     
-    visit root_path
+  #  visit root_path
     #expect(page).to have_text("Projects")
-    expect(page).to have_text("log in")
-  end
-  scenario "The visitor should see log out" do
-    visit root_path
-    expect(page).to have_text("log out")
-  end
+   # expect(page).to have_text("log in")
+  #end
+  #scenario "The visitor should see log out" do
+  #  visit root_path
+  #  expect(page).to have_text("log out")
+  #end
  
   scenario "The visitor should see Sign up" do
     visit root_path
