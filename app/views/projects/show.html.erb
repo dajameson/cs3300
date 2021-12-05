@@ -1,13 +1,16 @@
+
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @project.title %>
+
+  <h1 style = "color: purple; font-family: arial"><strong>Title:</strong>
+  <%= @project.title %></h1>
 </p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @project.description %>
+  <h6><strong>Description:</strong>
+  <%= @project.description %><h6>
 </p>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |

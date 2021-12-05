@@ -1,8 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Projects</h1>
+<style>
+  body{ background-color:white;}
+  h1{
+    position: relative;
+    left: 15px;
+    color: purple;
+  }
+  h2{
+    position: relative;
+    left: 650px;
+  }
+  p{
+    position: relative;
+    left: 15px;
+  }
+  h5{
+    position:relative;
+    left:15px;
+  }
+  
+</style>
 
-<table>
+<div class="jumbotron jumbotron-fluid">
+
+    <h1>Welcome!</h1>
+    <p>I am David and this is my portfolio website! I am a Computer Science major at the University of Colorado Colorado Springs<p>
+    <p>This is a showcase of various projects from UCCS.<p>
+  
+</div>
+<div class="container">
+<body>
+<h1>Projects</h1>
+<br>
+<h5><table>
   <thead>
     <tr>
       <th>Title</th>
@@ -14,16 +45,20 @@
   <tbody>
     <% @projects.each do |project| %>
       <tr>
-        <td><%= project.title %></td>
-        <td><%= project.description %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <td><br><%= project.title %></td>
+        <td><br><%= project.description %></td>
+        <td><br><button type="button" class="btn btn-outline-secondary btn-sm"><%= link_to 'Show', project %></button></td>
+        <td><br><button type="button" class="btn btn-outline-success btn-sm"><%= link_to 'Edit', edit_project_path(project) %></button</td>
+        <td><br><button type="button" class="btn btn-outline-danger btn-sm"><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+        </tr>
+
     <% end %>
+    
   </tbody>
-</table>
+</table></h5>
 
 <br>
 
-<%= link_to 'New Project', new_project_path %>
+<h5><button type="button" class="btn btn-outline-primary btn-sm"><%= link_to 'New Project', new_project_path %></button></h5>
+<body>
+</div>
